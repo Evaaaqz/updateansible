@@ -1,4 +1,3 @@
----
 - name: Update headnode and compute nodes
   hosts: all
   become: yes
