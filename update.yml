@@ -1,0 +1,16 @@
+---
+- name: Update headnode and compute nodes
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update apt package list
+      apt:
+        update_cache: yes
+
+    - name: Upgrade all packages to the latest version
+      apt:
+        upgrade: dist
+        autoremove: yes
+        autoclean: yes
+
