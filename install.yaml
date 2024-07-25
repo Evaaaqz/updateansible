@@ -1,7 +1,6 @@
 - hosts: all
   become: yes
-  vars:
-    package: unzip
   tasks:
   - name : Install unzip package
     apt: name={{package}} state=present update_cache=true
+    loop: [{{eins}}, {{zwei}}, {{drei}}, {{vier}}, {{fuenf}}]
