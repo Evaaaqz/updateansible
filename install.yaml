@@ -1,5 +1,7 @@
 - hosts: all
   become: yes
+  vars:
+    package: "unzip"
   tasks:
   - name : Install unzip package
-    apt: name=unzip state=present update_cache=true
+    apt: name="{{ unzip }}" state=present update_cache=true
