@@ -2,5 +2,5 @@
   become: yes
   tasks:
   - name : Install unzip package
-    apt: name={{package}} state=present update_cache=true
-    loop: [{{eins}}, {{zwei}}, {{drei}}, {{vier}}, {{fuenf}}]
+    apt: name="{{package}}" state=present update_cache=true
+    loop: ["{{eins}}", "{{zwei}}", "{{drei}}", "{{vier}}", "{{fuenf}}"]
