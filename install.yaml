@@ -4,4 +4,4 @@
     package: "unzip"
   tasks:
   - name : Install unzip package
-    apt: package="{{ unzip }}" state=present update_cache=true
+    apt: "{{ package=unzip }}" state=present update_cache=true
