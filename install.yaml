@@ -2,5 +2,5 @@
   become: yes
   tasks:
   - name : Install unzip package
-    apt: name="{{package}}" state=present update_cache=true
+    apt: name="{{item}}" state=present update_cache=true
     loop: ["{{multiple}}"]
